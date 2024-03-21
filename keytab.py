@@ -67,7 +67,7 @@ class KeyTab:
         data = bytes(password, 'ascii')
         cipher_text = cipher_suite.encrypt(data)
 
-        with open(fernet_key_tab, "wb") as key_tab:
+        with open(self.keytab_key_tab, "wb") as key_tab:
             key_tab.write(cipher_text)
         return True
 
